@@ -7002,7 +7002,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.list-group-item + .list-group-item {\n    border-top-width: 1px;\n}\n", ""]);
+exports.push([module.i, "\n.list-items{\n    border-top-width: 1px!important;\n}\n", ""]);
 
 // exports
 
@@ -39707,7 +39707,10 @@ var render = function () {
         _vm._l(_vm.users, function (user) {
           return _c(
             "li",
-            { key: _vm.users._id, staticClass: "list-group-item mb-1" },
+            {
+              key: _vm.users._id,
+              staticClass: "list-group-item mb-1 list-items",
+            },
             [
               _vm._v("\n            " + _vm._s(user.name) + "\n            "),
               _c("div", { staticClass: "float-right" }, [

@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <button class="btn btn-primary mb-2" @click="RefreshUsersData">Refresh</button>
         <ul class="list-group">
-            <li class="list-group-item mb-1" v-for='user in users' :key="users._id">
+            <li class="list-group-item mb-1 list-items" v-for='user in users' :key="users._id">
                 {{ user.name }}
                 <div class="float-right">
                     <button class="btn btn-primary float-left mr-1" @click="selected = user" data-toggle="modal" data-target="#updateModal">Details</button>
@@ -110,8 +110,8 @@ export default {
 </script>
 
 <style>
-.list-group-item + .list-group-item {
-    border-top-width: 1px;
-}
+    .list-items{
+        border-top-width: 1px!important;
+    }
 </style>
 
