@@ -44,6 +44,7 @@ export default {
                 console.log(e);
             }
         },
+
         /**
          * get users from mongodb
          * @returns {Promise<void>}
@@ -61,6 +62,7 @@ export default {
                 console.log(e);
             }
         },
+
         /**
          * Refreshing users data
          * @returns {Promise<void>}
