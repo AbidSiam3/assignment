@@ -28,7 +28,7 @@ export default {
         return {
             selected: '',
             users: [],
-            baseUrl:  'http://127.0.0.1:8000/api/',
+            baseUrl:  'http://localhost:8000/api/',
             externalUrl: 'https://gorest.co.in/public/v1/users'
         }
     },

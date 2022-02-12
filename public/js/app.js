@@ -2196,7 +2196,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     return {
       selected: '',
       users: [],
-      baseUrl: 'http://127.0.0.1:8000/api/',
+      baseUrl: 'http://localhost:8000/api/',
       externalUrl: 'https://gorest.co.in/public/v1/users'
     };
   },
@@ -2466,7 +2466,7 @@ var selectedUser;
   },
   data: function data() {
     return {
-      baseUrl: 'http://127.0.0.1:8000/api/'
+      baseUrl: 'http://localhost:8000/api/'
     };
   },
   methods: {
