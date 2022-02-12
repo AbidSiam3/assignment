@@ -74,7 +74,6 @@ export default {
          */
         async editUser(){
             try {
-                console.log(this.selectedUser);
                 this.selectedUser.status = this.selectedUser.active? 'active' : 'inactive';
                 const response = await axios.put(this.baseUrl+'users/' + this.selectedUser._id , this.selectedUser);
                 if(response.data === 1){

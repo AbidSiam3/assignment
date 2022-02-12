@@ -52,7 +52,6 @@ export default {
         async getUserData(){
             try{
                 const response = await axios.get(this.baseUrl+'users');
-                console.log(this.baseUrl+'users',response);
                 if(!response.data.length){
                     await this.RefreshUsersData();
                 }else{
