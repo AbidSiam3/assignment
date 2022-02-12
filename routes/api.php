@@ -13,5 +13,5 @@ use app\Http\Controllers\MongoUserController;
 |
 */
 
-Route::apiResource("user", "MongoUserController");
+Route::apiResource("users", "MongoUserController");
 Route::post("/refresh", "RefreshController");

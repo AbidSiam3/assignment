@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Models\MongoUser;
+use App\Models\MongoUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -15,8 +15,12 @@ class MongoUserController extends Controller
      */
     public function index()
     {
-
         $users = MongoUser::all();
+        if(!empty($users)){
+            foreach($users as $user){
+                $user['active'] = ($user['status'] == 'active')? true : false;
+            }
+        }
         return $users;
     }
 
@@ -88,11 +92,12 @@ class MongoUserController extends Controller
      * @param  \App\Http\Models\MongoUser  $mongoUser
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(Request $request)
     {
-//     dd($request , $id);
+        $id = $request->_id;
         $inputs = $request->all();
-        $user = MongoUser::findOrFail($request->id);
+//         dd($id, $inputs);
+        $user = MongoUser::findOrFail($id);
 
 
         return $user->update($inputs) ? 1 : 0;

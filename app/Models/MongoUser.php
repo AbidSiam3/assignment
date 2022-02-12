@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Models;
+namespace App\Models;
 
 use Jenssegers\Mongodb\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class MongoUser extends  Model
     protected $collection = 'user';
 
     protected $fillable = [
-        'name', 'email', 'gender', 'status'
+        'id','name', 'email', 'gender', 'status'
     ];
 }

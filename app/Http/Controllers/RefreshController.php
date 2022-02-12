@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Models\MongoUser;
+use App\Models\MongoUser;
 
 class RefreshController extends Controller
 {
