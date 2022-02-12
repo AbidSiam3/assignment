@@ -12,7 +12,6 @@
 
         </ul>
 
-
         <modal-component :selectedUser="selected"></modal-component>
     </div>
 
